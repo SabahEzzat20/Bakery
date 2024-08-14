@@ -8,6 +8,34 @@
     <link rel="stylesheet" href="./BakeryTask.css">
 </head>
 <body>
+    <div class="firstSection">
+        <div class="head">
+            <div class="headCont">
+                <div>
+                    <img src="./Images/bakery-light-1.png" alt="bakeryLightLogo" width="180" class="logo">
+                </div>
+                <div class="pagesLinks">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Our Offer</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="firstSecText">
+            <div class="welcomeTxt">Welcome to</div>
+            <div class="familyBakery">Family Bakery</div>
+            <div class="lastText">We're the biggest, best equipped and most advanced Bakery in the greater
+                Los Angeles area.</div>
+            <div>
+                <button class="learnMoreBtn">Learn More</button>
+                <button class="contactBtn">Contact us</button>
+            </div>
+        </div>
+        <img src="./Images/drew-coffman-1872.jpg" alt="" width="100%" class="firstSecImg">
+    </div>
     <div class="WhoWeAreSection">
         <div>
             <img src="./Images/secondSecionImage.jpg" width="570" alt="bread">
@@ -51,6 +79,51 @@
     </div>
     <div class="footer">
         <div class="footerLinks">
+            <div class="about">
+                <h4>About us</h4>
+                <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur. I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur.</p>
+                <p>We are the champions! We are the most amazing theme of all time, yeah.</p>
+            </div>
+            <div class="whyWeAreSpecial">
+                <h4>Why we are special?</h4>
+                <ul>
+                    <li>Our magical recipe.</li>
+                    <li>We care about environment.</li>
+                    <li>We are trusted by hundreds of clients.</li>
+                    <li>Social media loves us!</li>
+                    <li>This list is super easy to create.</li>
+                </ul>
+            </div>
+            <div class="openingHours">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Monday 10AM - 9PM</li>
+                    <li>Tuesday 10AM - 9PM</li>
+                    <li>Wednesday 10AM - 9PM</li>
+                    <li>Thursday 10AM - 10PM</li>
+                    <li>Friday 10AM - 10PM</li>
+                    <li>Weekends 10AM - 11PM</li>
+                </ul>
+            </div>
+            <div class="ContactDetails">
+                <h4>Contact Details</h4>
+                <div class="contactDetailsItem">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Manchester Road 123-78B, Silictown 7854MD, Great Country</span>
+                </div>
+                <div class="contactDetailsItem">
+                    <i class="fa-solid fa-phone"></i>
+                    <span><a href="tel:+46123456789">+46 123 456 789</a></span>
+                </div>
+                <div class="contactDetailsItem">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span><a href="mailto:hello@sitename.com">hello@sitename.com</a></span>
+                </div>
+                <div class="contactDetailsItem map">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <span><a href="#">http://www.sitename.com</a></span>
+                </div>
+            </div>
         </div>
         <div class="footerLogo">
             <div class="footerLogoImg">
@@ -67,5 +140,42 @@
             </div>
         </div>
     </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.head');
+            const logo = document.querySelector('.logo');
+            const headerCont = document.querySelector('.headCont');
+            const links = document.querySelectorAll('.pagesLinks a');
+            if (window.scrollY >= 200) {
+                header.style.backgroundColor = 'white';
+                header.style.boxShadow = '1px 1px 5px rgb(145, 145, 145,0.2)';
+                headerCont.style.margin = '10px 60px';
+                logo.src = './Images/bakery-color (1).png';
+                links.forEach(function(link){
+                    link.style.color = 'gray';
+                    link.addEventListener('mouseover', function() {
+                        link.style.color = 'black';
+                    });
+                    link.addEventListener('mouseout', function() {
+                        link.style.color = 'gray'; 
+                    });
+                })
+            } else {
+                links.forEach(function(link){
+                    link.addEventListener('mouseout', function() {
+                        link.style.color = 'white';
+                    });
+                    link.style.color = 'white';
+                    link.addEventListener('mouseover', function() {
+                        link.style.color = '#b49d79';
+                    });
+                })
+                header.style.boxShadow = 'none';
+                logo.src = './Images/bakery-light-1.png';
+                header.style.backgroundColor = 'transparent';
+                headerCont.style.margin = '20px 60px';
+            }
+        });
+    </script>
 </body>
 </html>
