@@ -223,7 +223,11 @@ p{
     border-radius: 5px;
     color: white;
     font-weight: 600;
-
+    transition: .5s;
+}
+.learnMoreBtn:hover,.contactBtn:hover{
+    background-color: white;
+    color: black;
 }
 .learnMoreBtn{
     background-color: #8E7754;
