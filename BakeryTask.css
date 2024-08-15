@@ -127,7 +127,7 @@ p{
 .footerLinks{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    column-gap: 10px;
+    column-gap: 30px;
 }
 .footerLinks{
     background-color: #403D38;
@@ -137,32 +137,33 @@ p{
 .about p{
     color: #969696;
 }
-.whyWeAreSpecial ul{
+.whyWeAreSpecial ul , .openingHours ul{
     position: relative;
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
-.whyWeAreSpecial ul li{
-    padding-left: 0; 
+.whyWeAreSpecial ul li , .openingHours ul li{
     margin: 0;
-    border-bottom: 1px solid;
+    padding: 10px 0;
 }
-.whyWeAreSpecial ul li::before{
+
+hr{
+    border: none;
+    height: 1px; 
+    background-color: #494949;
+}
+.whyWeAreSpecial ul li::before , .openingHours ul li::before{
     content: '>';
     font-size: 20px;
-    padding-right: 10px;
-    font-weight: 6002
+    padding-right: 5px;
+    font-weight: 600
 }
 .firstSection{
-    /* background-image: url("./Images/drew-coffman-1872.jpg"); */
-    object-fit: contain;
     width: 100%;
     height: 900px;
-
 }
 .head{
-    /* padding: 30px; */
     height: 70px;
     position: fixed;
     width: 100%;
@@ -259,4 +260,28 @@ p{
 .ourBaking{
     padding: 100px;
     text-align: center;
+}
+.contactDetailsItem{
+    display: flex;
+    padding: 10px 0;
+}
+.contactDetailsItem i{
+    margin-right: 10px;
+}
+.contactDetailsItem a {
+    text-decoration: none;
+    color: #969696;
+}
+/* .mapBackground{
+    background-color: red;
+    position: relative;
+    top: -10px;
+    left: -50px;
+} */
+
+.map{
+    background-image: url("./Images/image\ \(1\).png");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: red; */
 }
